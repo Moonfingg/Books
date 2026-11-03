@@ -1,5 +1,10 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { sound } from './audio';
+import cover1 from './WhatsApp_Image_2026-11-01_at_14.22.37_bcacd8d0.jpeg';
+import cover2 from './WhatsApp_Image_2026-11-01_at_14.31.06_f52eea40.jpeg';
+import cover3 from './WhatsApp_Image_2026-11-01_at_17.03.55_94a5660e.jpeg';
+import cover4 from './5ed96512-26a5-4c2a-a0e0-626e663c1dc1_7eb0f921.jpeg';
+import cover5 from './WhatsApp_Image_2026-11-01_at_14.38.34_deb154a4.jpeg';
 
 // Sheets metadata for original background textures
 const SHEETS = {
@@ -80,7 +85,7 @@ const FILMS: Film[] = [
       'Перцептивтік аспект бірін бірі түсіну және қабылдау',
     ],
     citation: 'Еңбек атауы:Unlocking High Quality Teaching',
-    customCoverUrl: import.meta.env.BASE_URL + 'assets/aistudio/WhatsApp_Image_2026-11-01_at_14.22.37_bcacd8d0.jpeg',
+    customCoverUrl: cover1,
     customSpineBg: 'linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 22%, #0A3254 22.5%, #0F4C81 78%, #0A3254 100%)',
     accent: '#0F4C81',
     tiltAngle: -4.2,
@@ -99,7 +104,7 @@ const FILMS: Film[] = [
       'Белсенді тыңдау түсінбеушілікті азайтып сенімді қарым қатынас қалыптастырады',
     ],
     citation: 'Еңбек атауы:Rogers және Farson 1957 Active Listening',
-    customCoverUrl: import.meta.env.BASE_URL + 'assets/aistudio/WhatsApp_Image_2026-11-01_at_14.31.06_f52eea40.jpeg',
+    customCoverUrl: cover2,
     customSpineBg: 'linear-gradient(to bottom, #321854 0%, #4D2D84 25%, #422472 75%, #23103D 100%)',
     accent: '#7C3AED',
     tiltAngle: -4.8,
@@ -118,7 +123,7 @@ const FILMS: Film[] = [
       'EEF зерттеуінде диалогтік оқыту бағдарламасына қатысқан бастауыш сынып оқушылары ағылшын тілі мен жаратылыстанудан бақылау тобынан орта есеппен екі айлық қосымша ілгерілеу көрсеткен',
     ],
     citation: 'Еңбек атауы:Education Endowment Foundation 2017',
-    customCoverUrl: import.meta.env.BASE_URL + 'assets/aistudio/WhatsApp_Image_2026-11-01_at_17.03.55_94a5660e.jpeg',
+    customCoverUrl: cover3,
     customSpineBg: 'linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 28%, #EA580C 28.5%, #EA580C 72%, #FFFFFF 72.5%, #FFFFFF 100%)',
     accent: '#EA580C',
     tiltAngle: -5.0,
@@ -137,7 +142,7 @@ const FILMS: Film[] = [
       'Кері байланыс адамның жеке басын емес нақты әрекеті мен нәтижесін бағалауы керек',
     ],
     citation: 'Еңбек атауы:Working With Parents To Support Childrens Learning',
-    customCoverUrl: import.meta.env.BASE_URL + 'assets/aistudio/5ed96512-26a5-4c2a-a0e0-626e663c1dc1_7eb0f921.jpeg',
+    customCoverUrl: cover4,
     customSpineBg: 'linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 22%, #0891B2 22.5%, #00838F 75%, #0891B2 75.5%, #0891B2 100%)',
     accent: '#0891B2',
     tiltAngle: -4.0,
@@ -159,7 +164,7 @@ const FILMS: Film[] = [
       'Ұйымдастырушылық кедергі уақыт тапшылығы шешімі байланысты жоспарлау',
     ],
     citation: 'Еңбек атауы:Research Papers in Education',
-    customCoverUrl: import.meta.env.BASE_URL + 'assets/aistudio/WhatsApp_Image_2026-11-01_at_14.38.34_deb154a4.jpeg',
+    customCoverUrl: cover5,
     customSpineBg: 'linear-gradient(to bottom, #4A0815 0%, #7A1024 25%, #630C1D 75%, #38050E 100%)',
     accent: '#851229',
     tiltAngle: -5.0,
