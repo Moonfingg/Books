@@ -1,4 +1,4 @@
- import React, { useEffect, useRef, useState, useCallback } from 'react';
+  import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { sound } from './audio';
 import cover1 from './WhatsApp_Image_2026-11-01_at_14.22.37_bcacd8d0.jpeg';
 import cover2 from './WhatsApp_Image_2026-11-01_at_14.31.06_f52eea40.jpeg';
@@ -277,6 +277,7 @@ export default function App() {
   // Detail refs
   const detailDialogRef = useRef<HTMLDivElement>(null);
   const blobCircleRefs = useRef<(SVGCircleElement | null)[]>([]);
+  const posterImgRef = useRef<SVGImageElement>(null);
   const detailMaskedLinesRef = useRef<(HTMLElement | null)[]>([]);
 
   // Animation & Motion State Refs (read inside rAF)
@@ -449,6 +450,9 @@ export default function App() {
     const film = FILMS[m.activeFilm];
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Restore ink mask on poster image
+    posterImgRef.current?.setAttribute('mask', 'url(#poster-ink-mask)');
+
     // Reset ink blobs radius to 0
     blobCircleRefs.current.forEach((circle) => {
       if (circle) circle.setAttribute('r', '0');
@@ -507,6 +511,7 @@ export default function App() {
         dialog.style.clipPath = 'none';
         dialog.style.transform = 'none';
         blobCircleRefs.current.forEach((c) => c?.setAttribute('r', '760'));
+        posterImgRef.current?.removeAttribute('mask');
       } else {
         if (m.currentDetailAnimation) {
           m.currentDetailAnimation.cancel();
@@ -582,6 +587,7 @@ export default function App() {
             m.inkRafId = requestAnimationFrame(animateInkBleed);
           } else {
             blobCircleRefs.current.forEach((c) => c?.setAttribute('r', '760'));
+            posterImgRef.current?.removeAttribute('mask');
           }
         };
 
@@ -1629,7 +1635,7 @@ export default function App() {
             >
               <defs>
                 {/* SVG Filter for ragged ink blot edges */}
-                <filter id="ink-bleed-filter" x="-25%" y="-25%" width="150%" height="150%">
+                <filter id="ink-bleed-filter" filterUnits="userSpaceOnUse" x="-200" y="-200" width="874" height="1300">
                   <feTurbulence
                     type="fractalNoise"
                     baseFrequency="0.012"
@@ -1680,6 +1686,7 @@ export default function App() {
               {/* The cover image directly bound with reliable coordinates */}
               <g clipPath="url(#poster-clip-rect)">
                 <image
+                  ref={posterImgRef}
                   mask="url(#poster-ink-mask)"
                   preserveAspectRatio="none"
                   href={posterImageHref}
