@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1150" width="800" height="1150">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F2EDE4"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Paper -->
+  <rect width="800" height="1150" fill="url(#bgGrad)"/>
+
+  <!-- Top Header bar -->
+  <rect x="0" y="0" width="800" height="18" fill="#0D9488"/>
+
+  <!-- EEF Logo Area -->
+  <g transform="translate(60, 60)">
+    <!-- EEF Triangle Icon -->
+    <polygon points="26,0 52,44 0,44" fill="#0D9488"/>
+    <polygon points="26,44 52,88 0,88" fill="#14B8A6" opacity="0.8"/>
+    <text x="68" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="28" fill="#0F766E" letter-spacing="1">EEF</text>
+    <text x="68" y="56" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="14" fill="#334155" letter-spacing="0.5">Education Endowment</text>
+    <text x="68" y="74" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="14" fill="#0D9488" letter-spacing="0.5">Foundation</text>
+  </g>
+
+  <!-- Category Kicker -->
+  <g transform="translate(60, 220)">
+    <rect x="0" y="0" width="180" height="28" rx="4" fill="#CCFBF1"/>
+    <text x="14" y="19" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#0F766E" letter-spacing="1.5">GUIDANCE REPORT</text>
+  </g>
+
+  <!-- Main Title -->
+  <g transform="translate(60, 310)">
+    <text x="0" y="0" font-family="'Times New Roman', serif" font-weight="700" font-size="52" fill="#0F172A" line-height="1.15">
+      <tspan x="0" dy="0">Working with</tspan>
+      <tspan x="0" dy="64">Parents to Support</tspan>
+      <tspan x="0" dy="64" fill="#0D9488">Children's Learning</tspan>
+    </text>
+  </g>
+
+  <!-- Subtitle & Focus -->
+  <g transform="translate(60, 520)">
+    <line x1="0" y1="0" x2="680" y2="0" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="0" y="40" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#475569">
+      Кері байланыс пен ынтымақтастықты дамыту жөніндегі нұсқаулық
+    </text>
+    <text x="0" y="68" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="15" fill="#64748B">
+      Practical evidence-based recommendations for teachers and schools
+    </text>
+  </g>
+
+  <!-- Central Graphic Banner (Family & Learning Illustration Area) -->
+  <g transform="translate(60, 630)">
+    <rect width="680" height="340" rx="16" fill="url(#tealGrad)" filter="url(#shadow)"/>
+    
+    <!-- Decorative geometric background elements -->
+    <circle cx="560" cy="170" r="140" fill="#14B8A6" opacity="0.15"/>
+    <circle cx="120" cy="220" r="80" fill="#2DD4BF" opacity="0.12"/>
+
+    <!-- Graphic Icons Representation -->
+    <g transform="translate(70, 70)" stroke="#F0FDFA" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Conversation & Feedback Icon -->
+      <path d="M40 90 A 40 40 0 1 1 80 50 L 95 65 L 75 60 A 40 40 0 0 1 40 90 Z" stroke="#5EEAD4" stroke-width="4"/>
+      <path d="M140 120 A 30 30 0 1 1 170 90 L 180 102 L 165 98 A 30 30 0 0 1 140 120 Z" stroke="#99F6E4" stroke-width="3"/>
+      <!-- Heart / Support -->
+      <path d="M260 80 Q 280 50 300 80 Q 320 50 340 80 Q 300 130 300 130 Q 300 130 260 80 Z" fill="#2DD4BF" stroke="none" opacity="0.6"/>
+    </g>
+
+    <text x="70" y="240" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="24" fill="#FFFFFF" letter-spacing="0.5">
+      ОҚУШЫ • МҰҒАЛІМ • АТА-АНА
+    </text>
+    <text x="70" y="275" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="16" fill="#CCFBF1">
+      Тиімді кері байланыс және білім сапасын арттыру
+    </text>
+  </g>
+
+  <!-- Bottom Details & Publication Info -->
+  <g transform="translate(60, 1040)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#0F172A">
+      Education Endowment Foundation
+    </text>
+    <text x="0" y="22" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="12" fill="#64748B">
+      London • Guidance Report • Evidence Review
+    </text>
+
+    <text x="680" y="10" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="15" fill="#0D9488">
+      EEF EVIDENCE
+    </text>
+  </g>
+</svg>
